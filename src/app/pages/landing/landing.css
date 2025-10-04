@@ -1,0 +1,46 @@
+/* Landing page styles */
+.intro {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f4f4f9;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #001f54; /* navy */
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .bucket-list {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .bucket-list h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ff8c00; /* orange accent */
+  }
+  
+  .bucket-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bucket-list li {
+    background: #eaf6ff;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
