@@ -1,17 +1,60 @@
-<h2>Resume</h2>
-<p><a href="assets/Joseph-Akindele-Resume.pdf" download>📄 Download Resume</a></p>
+<section class="resume">
 
-<section>
-  <h3>Education</h3>
-  <p>B.Sc. Web Development – Bellevue University (Expected 2025)</p>
-</section>
+    <app-particles [count]="30"></app-particles>
 
-<section>
-  <h3>Skills</h3>
-  <ul>
-    <li>HTML, CSS, JavaScript, TypeScript</li>
-    <li>Angular, Node.js, MongoDB</li>
-    <li>WordPress Development</li>
-  </ul>
-</section>
-
+    <h1>Resume</h1>
+    <p class="intro">Here’s a summary of my experience, education, and skills.</p>
+  
+    <div class="resume-grid">
+      <div class="card">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Full-Stack Developer</strong> — Freelance (2024–Present)
+            <p>Built scalable web apps using the MEAN stack and deployed cloud-based solutions.</p>
+          </li>
+          <li>
+            <strong>WordPress Developer</strong> — Arese Fit
+            <p>Designed and managed business websites using Elementor and WP Bakery.</p>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>B.Sc. Web Development</strong> — Bellevue University
+            <p>Expected Graduation: 2025</p>
+          </li>
+          <li>
+            <strong>Software Engineering Certificate</strong> — Decagon Institute
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span>Full-Stack Development</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+          <span>TypeScript</span>
+          <span>HTML/CSS</span>
+          <span>WordPress</span>
+          <span>Git & GitHub</span>
+          <span>JavaScript</span>
+          <span>Wordpress</span>
+          <span>Team Collaboration</span>
+          <span>Figma</span>
+          <span>Canva</span>
+          <span>CI/CD</span>
+          <span>Agile Methodologies</span>
+        </div>
+      </div>
+    </div>
+  
+    <button (click)="downloadResume()">Download Resume (PDF)</button>
+  </section>
+  

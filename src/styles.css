@@ -1,77 +1,27 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Navigation */
-  header {
-    background: navy;
-    color: white;
-    padding: 1rem;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav-links a:hover {
-    color: orange;
-  }
-  
-  /* Intro Section */
-  .intro {
-    text-align: center;
-    padding: 2rem;
-    background: #f4f4f4;
-  }
-  
-  .bucket-list {
-    padding: 2rem;
-  }
-  
-  .bucket-list ul {
-    list-style: none;
-  }
-  
-  .bucket-list li {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-  }
-  
-  /* About Section */
-  .about {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .about img {
-    max-width: 200px;
-    border-radius: 50%;
-    border: 3px solid teal;
-  }
-  
+:root {
+  --bg-color: #0a0f1f;
+  --card-color: #141b2b;
+  --primary: #00ffc6;
+  --accent: #ff73fa;
+  --text-color: #e4e6eb;
+  --hover-bg: #1e2a40;
+  --border-color: #1f2933;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background: var(--bg-dark, #0a0f1f);
+}
+/* everything except the particle layer sits above it */
+.page > :not(app-particles) { position: relative; z-index: 1; }

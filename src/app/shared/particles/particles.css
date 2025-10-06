@@ -1,0 +1,22 @@
+:host {
+    position: absolute; inset: 0;
+    z-index: 0; pointer-events: none; /* sit behind content, ignore clicks */
+    display: block;
+  }
+  
+  .floating-particles { position: absolute; inset: 0; overflow: hidden; }
+  
+  .particle {
+    position: absolute; border-radius: 50%;
+    animation-name: float; animation-timing-function: linear; animation-iteration-count: infinite;
+    opacity: .8;
+  }
+  .particle:nth-child(odd) { opacity: .6; }
+  .particle:nth-child(3n) { opacity: .4; }
+  
+  @keyframes float {
+    0%   { transform: translate(0,0);     opacity: .8; }
+    50%  { transform: translate(20px,-40px); opacity: .4; }
+    100% { transform: translate(0,0);     opacity: .8; }
+  }
+  

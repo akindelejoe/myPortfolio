@@ -1,46 +1,175 @@
-/* Landing page styles */
+.landing {
+  position: relative;
+  background: radial-gradient(circle at top, #0a0f1f 0%, #04080f 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* HERO TEXT */
+.hero {
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeIn 1.2s ease;
+}
+
 .intro {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #f4f4f9;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  margin-bottom: 0.5rem;
+}
+
+.intro span {
+  color: var(--primary);
+  text-shadow: 0 0 15px rgba(0, 255, 198, 0.6);
+}
+
+.role {
+  font-size: 1.5rem;
+  color: #a7abb3;
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  color: #c4c7cc;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* CTA BUTTONS */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 198, 0.4);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  background: var(--accent);
+}
+
+.btn.secondary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn.secondary:hover {
+  background: var(--accent);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* BACKGROUND ANIMATION */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 198, 0.1), transparent 70%);
+  animation: pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* FLOATING PARTICLES BACKGROUND */
+.floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 255, 198, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 255, 198, 0.8);
+  animation: float 10s linear infinite;
+  opacity: 0.8;
+}
+
+/* Random placement & timing for each particle */
+.particle:nth-child(odd) {
+  width: 5px;
+  height: 5px;
+  animation-duration: 12s;
+}
+.particle:nth-child(3n) {
+  width: 10px;
+  height: 10px;
+  animation-duration: 14s;
+  opacity: 0.5;
+}
+
+/* Random positions using nth-child */
+.particle:nth-child(1) { top: 10%; left: 5%; }
+.particle:nth-child(2) { top: 80%; left: 15%; }
+.particle:nth-child(3) { top: 50%; left: 25%; }
+.particle:nth-child(4) { top: 30%; left: 60%; }
+.particle:nth-child(5) { top: 70%; left: 85%; }
+.particle:nth-child(6) { top: 40%; left: 75%; }
+.particle:nth-child(7) { top: 90%; left: 45%; }
+.particle:nth-child(8) { top: 20%; left: 80%; }
+.particle:nth-child(9) { top: 65%; left: 30%; }
+.particle:nth-child(10) { top: 55%; left: 10%; }
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
   }
-  
-  .intro h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #001f54; /* navy */
+  50% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 0.4;
   }
-  
-  .intro p {
-    font-size: 1.2rem;
-    color: #555;
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
   }
-  
-  .bucket-list {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  .bucket-list h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #ff8c00; /* orange accent */
-  }
-  
-  .bucket-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .bucket-list li {
-    background: #eaf6ff;
-    margin: 0.5rem 0;
-    padding: 0.8rem;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
+}
+
+.hero {
+  z-index: 2;
+  position: relative;
+}
+.landing {
+  position: relative;
+  overflow: hidden;
+}

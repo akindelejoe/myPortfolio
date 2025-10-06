@@ -1,0 +1,14 @@
+<div class="floating-particles">
+    <div
+      class="particle"
+      *ngFor="let p of particles; let i = index"
+      [style.top.%]="top(i)"
+      [style.left.%]="left(i)"
+      [style.width.px]="size(i)"
+      [style.height.px]="size(i)"
+      [style.animationDuration.s]="dur(i)"
+      [style.background]="'rgba(' + color + ',0.6)'"
+      [style.boxShadow]="'0 0 8px rgba(' + color + ',0.8)'">
+    </div>
+  </div>
+  
