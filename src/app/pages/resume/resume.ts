@@ -10,6 +10,6 @@ import { ParticlesComponent } from '../../shared/particles/particles';
 })
 export class ResumeComponent {
   downloadResume() {
-    window.open('assets/Joseph-Akindele-Resume-updated-I.pdf');
+    window.open('assets/Joseph-Akindele-Resume-updated-I.pdf', '_blank');
   }
 }
